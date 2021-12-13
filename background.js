@@ -9,7 +9,7 @@
 			message: 'Tell yer frens',
 			title: 'Leet!',
 			type: 'basic',
-			iconUrl: '/images/get_started32.png'
+			iconUrl: '/images/get_started128.png'
 		}, () => {
 			console.log('Notification triggered, restart the timer')
 			leet()
