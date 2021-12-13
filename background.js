@@ -4,18 +4,17 @@
 
 	console.log(`Settings timeout for ${timeOffset} ms until next leet alert`)
 
-  setTimeout(() => {
-    chrome.notifications.create({
-      message: 'Tell yer frens',
-      title: 'Leet!',
-      type: 'basic',
-      iconUrl: '/images/get_started32.png'
-    },
-    () => {
-      console.log('Notification triggered, restart the timer')
-      leet()
-    })
-  }, timeOffset)
+	setTimeout(() => {
+		chrome.notifications.create({
+			message: 'Tell yer frens',
+			title: 'Leet!',
+			type: 'basic',
+			iconUrl: '/images/get_started32.png'
+		}, () => {
+			console.log('Notification triggered, restart the timer')
+			leet()
+		})
+	}, timeOffset)
 })()
 
 function getNextLeetMS(d) {
