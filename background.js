@@ -1,0 +1,29 @@
+(function leet() {
+	const d = new Date()
+	const timeOffset = getNextLeetMS(d)
+
+	console.log(`Settings timeout for ${timeOffset} ms until next leet alert`)
+
+  setTimeout(() => {
+    chrome.notifications.create({
+      message: 'Tell yer frens',
+      title: 'Leet!',
+      type: 'basic',
+      iconUrl: '/images/get_started32.png'
+    },
+    () => {
+      console.log('Notification triggered, restart the timer')
+      leet()
+    })
+  }, timeOffset)
+})()
+
+function getNextLeetMS(d) {
+	const nextLeet = new Date(d.getFullYear(), d.getMonth(), d.getDate(), 13, 37, 0, 0)
+
+	if (nextLeet.getTime() <= d.getTime()) {
+		nextLeet.setDate(nextLeet.getDate() + 1)
+	}
+
+	return nextLeet.getTime() - d.getTime()
+}

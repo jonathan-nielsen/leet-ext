@@ -1,0 +1,17 @@
+{
+  "name": "Leet alert",
+  "description": "Alert the user at 13:37:00!",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+		"storage",
+		"scripting",
+		"notifications"
+	],
+  "icons": {
+    "128": "/images/icon128.png"
+  }
+}
