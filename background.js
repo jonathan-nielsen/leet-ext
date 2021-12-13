@@ -2,7 +2,7 @@
 	const d = new Date()
 	const timeOffset = getNextLeetMS(d)
 
-	console.log(`Settings timeout for ${timeOffset} ms until next leet alert`)
+	console.log(`Setting a timeout of ${timeOffset} ms until next leet alert`)
 
 	setTimeout(() => {
 		chrome.notifications.create({
