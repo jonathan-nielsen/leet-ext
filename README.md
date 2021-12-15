@@ -11,3 +11,6 @@ Trigger a chrome notification 13:37, the script needs to be manually imported.
 1. Pull the latest changes.
 2. Navigate to chrome://extensions.
 3. Hit the refresh button under the extension.
+
+## License
+[MIT](./LICENSE)
