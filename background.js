@@ -9,7 +9,7 @@
 			message: 'Tell yer frens',
 			title: 'Leet!',
 			type: 'basic',
-			iconUrl: '/images/get_started128.png'
+			iconUrl: '/images/icon128.png'
 		}, () => {
 			console.log('Notification triggered, restart the timer')
 			leet()
@@ -18,7 +18,7 @@
 })()
 
 function getNextLeetMS(d) {
-	const nextLeet = new Date(d.getFullYear(), d.getMonth(), d.getDate(), 13, 37, 0, 0)
+	const nextLeet = new Date(d.getFullYear(), d.getMonth(), d.getDate(), 9, 44, 0, 0)
 
 	if (nextLeet.getTime() <= d.getTime()) {
 		nextLeet.setDate(nextLeet.getDate() + 1)
